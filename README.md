@@ -18,3 +18,16 @@ git clone https://github.com/ivan-khramtsovskiy/akt-network-info.git
 ```shell
 git pull
 ```
+
+---
+### Расписание звонков
+
+
+|II смена|
+|-|
+| Пары | Время |
+|-|-|
+|1|14:00 - 15:00|
+|2|15:15 - 16:15|
+|3|16:30 - 17:30|
+|4|17:45 - 18:45|
