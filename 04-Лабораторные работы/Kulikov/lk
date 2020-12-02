@@ -1,0 +1,24 @@
+!#/bin/bush
+
+**Выполнил;** Куликов Никита Владимирович
+
+  1. Заходим в VirtualBox, выбираем нужную машину
+ 2. ПКМ >> Настроить >> Сеть
+
+![Скрин](https://i.ibb.co/PGGrhQg/Screenshot-1.png)
+ 3. В сети мы меняем,Тип подключения на: Внутреняя сеть, и дополнительно неразборчивый режим для всех
+
+ ![Скрин](https://i.ibb.co/mcZxM78/Screenshot-3.png)
+  4. Запускаем терминал (Ctrl+Alt+T) на 1-й машине. Устанавливаем через консось wireshark( sudo apt install wireshark)
+
+![Скрин](https://i.ibb.co/QX7GB1v/Screenshot-7.png)
+5. Заходим в WireShark (sudo wireshark), выбираем any
+
+![Скрин](https://i.ibb.co/WgJVjQN/Screenshot-6.png)
+
+6. Запускаем терминал (Ctrl+Alt+T) на 2-й машине, вводим ifconfig, копируем строчку ether (MAC-адрес), далее вводим sudo scapy (запускается программа), вводим в неё строчку sendp(Ether(src'MAC-адрес)/'Любой текст',iface='enp0s3') и нажимаем Enter.
+
+![Скрин](https://i.ibb.co/JdKRhnP/Screenshot-5.png)
+
+7.Переходим в WireShark и ищем пакет с протоколом LOOP, если нашли, то всё получилось.
+
